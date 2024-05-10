@@ -22,3 +22,29 @@ string[] EnteringOfArray()
 
     return newArray;
 }
+
+string[] CreateArrayWithLessThanThreeSymbols(string[] newArray)
+{
+    int count = 0;
+    foreach (string item in newArray)
+    {
+        if (item.Length <= 3)
+        {
+            count++;
+        }
+    }
+    string[] result = new string[count];
+
+    int i = 0;
+
+    foreach (string item in newArray)
+    {
+        if (item.Length <= 3)
+        {
+            result[i] = item;
+            i++;
+        }
+    }
+
+    return result;
+}
