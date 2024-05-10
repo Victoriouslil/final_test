@@ -7,3 +7,18 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
+string[] EnteringOfArray()
+{
+    Console.WriteLine("Введите количество строк массива: ");
+    int count = int.Parse(Console.ReadLine());
+
+    string[] newArray = new string[count];
+
+    Console.WriteLine($"Введите {count} строк:");
+    for (int i = 0; i < count; i++)
+    {
+        newArray[i] = Console.ReadLine();
+    }
+
+    return newArray;
+}
