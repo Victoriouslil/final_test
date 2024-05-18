@@ -48,3 +48,26 @@ string[] CreateArrayWithLessThanThreeSymbols(string[] newArray)
 
     return result;
 }
+
+string PrintArray(string[] newArray)
+{
+    string arrayString = "[";
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        arrayString += $"\"{newArray[i]}\"";
+        if (i < newArray.Length - 1)
+        {
+            arrayString += ", ";
+        }
+    }
+    arrayString += "]";
+    return arrayString;
+}
+
+string[] newArray = EnteringOfArray();
+string[] result = CreateArrayWithLessThanThreeSymbols(newArray);
+string firstArr = PrintArray(newArray);
+string secondArr = PrintArray(result);
+
+Console.WriteLine(firstArr + "--->" + secondArr);
+
