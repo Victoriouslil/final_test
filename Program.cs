@@ -9,12 +9,12 @@
 
 string[] EnteringOfArray()
 {
-    Console.WriteLine("Введите количество строк массива: ");
+    Console.WriteLine("Введите количество элементов массива: ");
     int count = int.Parse(Console.ReadLine());
 
     string[] newArray = new string[count];
 
-    Console.WriteLine($"Введите {count} строк:");
+    Console.WriteLine($"Введите {count} элемента:");
     for (int i = 0; i < count; i++)
     {
         newArray[i] = Console.ReadLine();
